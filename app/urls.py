@@ -1,10 +1,9 @@
 from django.urls import path
 
-from app.views import hello
-from app.views import job_detail
+from app import views
 
 
 urlpatterns = [
-    path('', hello),
-    path('job/1', job_detail)
+    path('', views.hello),
+    path('job/<id>', views.job_detail)
 ]
